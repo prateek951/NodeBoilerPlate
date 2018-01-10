@@ -10,9 +10,7 @@ const products = require('./api/routes/products');
 const orders = require('./api/routes/orders');
 const user = require('./api/routes/user');
 
-mongoose.connect('mongodb://node-shop:' + process.env.MONGO_ATLAST_PW + '@node-restapi-shop-shard-00-00-3wuq3.mongodb.net:27017,node-restapi-shop-shard-00-01-3wuq3.mongodb.net:27017,node-restapi-shop-shard-00-02-3wuq3.mongodb.net:27017/test?ssl=true&replicaSet=node-restapi-shop-shard-0&authSource=admin',{
-	useMongoClient : true
-});
+mongoose.connect('mongodb://localhost:27017/node-shop');
 mongoose.Promise = global.Promise;
 
 app.use(morgan('dev'));
